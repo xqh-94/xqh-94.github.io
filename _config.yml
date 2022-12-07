@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: XiaoQinHong
+title: Test title
+description: Test description
 subtitle: ""
-description: ""
 keywords:
 author: XiaoQinHong
 language: zh-CN
