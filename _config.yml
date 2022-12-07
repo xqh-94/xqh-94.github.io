@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Test title
-description: Test description
+title: XiaoQinHong
 subtitle: ""
+description: ""
 keywords:
 author: XiaoQinHong
 language: zh-CN
@@ -100,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: blinkfox
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
