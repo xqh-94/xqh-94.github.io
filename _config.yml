@@ -106,5 +106,5 @@ theme: blinkfox
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:xqh-94/Xiaoqh.git
+  repository: git@github.com:xqh-94/XiaoQH.github.io.git
   branch: master
