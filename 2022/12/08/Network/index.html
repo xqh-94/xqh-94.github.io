@@ -5,9 +5,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Network, XiaoQinHong">
-    <meta name="description" content="1.ICMP1.1 ICMP介绍​	ICMP，全称是 Internet Control Message Protocol，即互联网控制报文协议。属于网络层，它的主要功能是传输网络诊断信息，信息主要包括两类：
+    <meta name="description" content="1.网络参考模型
 
-一类是 查询类报文 ：主要用于">
+
+
+OSI中的层级
+功能
+TCP&amp;#x2F;IP协议族
+
+
+
+应用层
+
+HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
+
+
+表示层
+数据格式化，代码转换，数据加密
+
+
+
+会话层
+解除或建立与别的站点的联系">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -410,26 +429,129 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-ICMP"><a href="#1-ICMP" class="headerlink" title="1.ICMP"></a>1.ICMP</h1><h2 id="1-1-ICMP介绍"><a href="#1-1-ICMP介绍" class="headerlink" title="1.1 ICMP介绍"></a>1.1 ICMP介绍</h2><p>​	<strong>ICMP</strong>，全称是 Internet Control Message Protocol，即互联网控制报文协议。属于网络层，它的主要功能是传输网络诊断信息，信息主要包括两类：</p>
+                <h1 id="1-网络参考模型"><a href="#1-网络参考模型" class="headerlink" title="1.网络参考模型"></a>1.网络参考模型</h1><p><img src="./OSI.png"></img></p>
+<table>
+<thead>
+<tr>
+<th align="center">OSI中的层级</th>
+<th>功能</th>
+<th>TCP&#x2F;IP协议族</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">应用层</td>
+<td></td>
+<td>HTTP，SNMP，FTP，SMTP，DNS，Telnet 等</td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td>数据格式化，代码转换，数据加密</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td>解除或建立与别的站点的联系</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td>提供端对端的接口</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td>为数据包选择路由</td>
+<td>IP，ICMP，OSPF，EIGRP，IGMP</td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td>传输有地址的帧以及错误检测功能</td>
+<td>SLIP，CSLIP，PPP，MTU</td>
+</tr>
+<tr>
+<td align="center">物理层</td>
+<td>以二进制数据形式在物理媒体上传输数据</td>
+<td>ISO2110，IEEE802，IEEE802.2</td>
+</tr>
+</tbody></table>
+<pre><code> OSI 参考模型全称是开放系统互连参考模型(Open System Interconnection Reference Model)。这一参考模型共分为七层：物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。 
+</code></pre>
+<h2 id="1-1-物理层"><a href="#1-1-物理层" class="headerlink" title="1.1 物理层"></a>1.1 物理层</h2><p>作用：将数据的0,1转换为电信号或者光信号</p>
+<h2 id="1-2-数据链路层"><a href="#1-2-数据链路层" class="headerlink" title="1.2  数据链路层"></a>1.2  数据链路层</h2><p> 数据链路层是负责接收 IP 数据包并通过网络发送，或者从网络上接收物理帧，抽出 IP 数据包，交给 IP 层 。</p>
+<h2 id="1-3-网络层"><a href="#1-3-网络层" class="headerlink" title="1.3 网络层"></a>1.3 网络层</h2><p> 负责相邻计算机之间的通信。实现将数据传输到目标地址的功能 </p>
+<p>网络层协议包括：</p>
+<ul>
+<li>IP协议： 网络层的核心，通过路由选择将下一条IP封装后交给接口层。IP数据报是无连接服务。 </li>
+<li>ICMP协议： 是网络层的补充，可以回送报文。用来检测网络是否通畅。 </li>
+<li>ARP协议： 正向地址解析协议，通过已知的 IP，寻找对应主机的 MAC 地址。 </li>
+<li>RARP协议： 反向地址解析协议，通过 MAC 地址确定 IP 地址。</li>
+</ul>
+<h2 id="1-4-传输层"><a href="#1-4-传输层" class="headerlink" title="1.4 传输层"></a>1.4 传输层</h2><p> 提供应用程序间的通信。管理两个节点之间的数据传输，指定通信端口</p>
+<p>传输层协议包括：</p>
+<ul>
+<li>TCP协议： 传输控制协议 </li>
+<li>UDP协议： 用户数据报协议</li>
+</ul>
+<h2 id="1-5-会话层"><a href="#1-5-会话层" class="headerlink" title="1.5 会话层"></a>1.5 会话层</h2><p>负责建立和断开通信连接</p>
+<h2 id="1-6-表示层"><a href="#1-6-表示层" class="headerlink" title="1.6 表示层"></a>1.6 表示层</h2><p>将应用处理的信息转换为适合网络传输的格式</p>
+<h2 id="1-7-应用层"><a href="#1-7-应用层" class="headerlink" title="1.7 应用层"></a>1.7 应用层</h2><p> 向用户提供一组常用的应用程序，比如电子邮件、文件传输访问、远程登录等。 </p>
+<p>应用层协议包括：</p>
+<p>FTP协议： 文件传输协议，一般上传下载用FTP服务，数据端口是 20H，控制端口是 21H。 </p>
+<p>TELNET协议： 用户远程登录服务，使用 23H 端口，使用明码传送，保密性差、简单方便。 </p>
+<p>DNS协议： 域名解析服务，提供域名到 IP 地址之间的转换，使用端口 53 </p>
+<p>SMTP协议： 简单邮件传输协议，用来控制信件的发送、中转，使用端口 25 </p>
+<p>NFS协议： 网络文件系统，用于网络中不同主机间的文件共享。 </p>
+<p>HTTP协议： 超文本传输协议，用于实现互联网中的 WWW 服务，使用端口 80 。</p>
+<h1 id="2-ICMP"><a href="#2-ICMP" class="headerlink" title="2.ICMP"></a>2.ICMP</h1><p>##2 .1 ICMP介绍</p>
+<p>​	<strong>ICMP</strong>，全称是 Internet Control Message Protocol，即互联网控制报文协议。属于网络层，它的主要功能是传输网络诊断信息，信息主要包括两类：</p>
 <ul>
 <li>一类是 查询类报文 ：主要用于信息的查询和采集，比如采集传输路径上的每个路由器都是谁，本次传输的报文是否达到目的地等等。</li>
 <li>另一类是 差错诊断类报文 ：主要用于诊断网络故障，比如传输报文被丢弃的原因是什么等等。</li>
 </ul>
-<h2 id="1-2-ICMP作用"><a href="#1-2-ICMP作用" class="headerlink" title="1.2 ICMP作用"></a>1.2 ICMP作用</h2><p>​	IP 协议是一个不可靠协议，如果 IP 包在传输过程中出现错误，比如拥塞，超时等等，那么 IP 包是会直接被丢弃的，之后也不会有进一步的努力来修正。</p>
+<p>##2 .2 ICMP作用</p>
+<p>​	IP 协议是一个不可靠协议，如果 IP 包在传输过程中出现错误，比如拥塞，超时等等，那么 IP 包是会直接被丢弃的，之后也不会有进一步的努力来修正。</p>
 <p>​	通过 ICMP 协议，当 IP 包发生错误的时候，上层发送 IP 包的主机或路由器并不知道下层发生了错误，这个时候，下层的主机或路由器就可以通过发送 ICMP 包，将错误信息汇报给上层，从而让上层的主机或路由器进行调整。</p>
 <p>​	不过需要注意的是，ICMP 仅仅只能提供某些特定类型的错误信息汇报，并不能帮助 IP 协议成为可靠的协议。它能做的事还是有限，但用于基本的网络质量管理是足够了。</p>
 <p>​	<strong>ICMP的功能是检错而不是纠错。</strong></p>
-<h2 id="1-3-ICMP数据报格式"><a href="#1-3-ICMP数据报格式" class="headerlink" title="1.3 ICMP数据报格式"></a>1.3 ICMP数据报格式</h2><p>​	ICMP是IP协议的一部分，因此，ICMP协议的报文包含在IP数据报的数据部分：</p>
+<h2 id="2-3-ICMP数据报格式"><a href="#2-3-ICMP数据报格式" class="headerlink" title="2.3 ICMP数据报格式"></a>2.3 ICMP数据报格式</h2><p>​	ICMP是IP协议的一部分，因此，ICMP协议的报文包含在IP数据报的数据部分：</p>
 <p><img src="./icmp.png"></img></p>
 <p>1）类型（Type）：4位，标明ICMP报文的作用及格式。</p>
 <p>2）代码（Code）：4位，标明报文的类型。</p>
 <p>3）校验和：8位，检验报文是否有误。</p>
 <p>ICMP协议主要通过 Type 和 Code 的组合，来标明报文的类型</p>
-<h2 id="1-4-ICMP命令"><a href="#1-4-ICMP命令" class="headerlink" title="1.4 ICMP命令"></a>1.4 ICMP命令</h2><h3 id="1-4-1-ping"><a href="#1-4-1-ping" class="headerlink" title="1.4.1 ping"></a>1.4.1 ping</h3><p>​	ping命令能够验证网络的连通性，统计响应时间和TTL(IP包中的Time To Live，生存周期)</p>
+<h2 id="2-4-ICMP命令"><a href="#2-4-ICMP命令" class="headerlink" title="2.4 ICMP命令"></a>2.4 ICMP命令</h2><h3 id="1-4-1-ping"><a href="#1-4-1-ping" class="headerlink" title="1.4.1 ping"></a>1.4.1 ping</h3><p>​	ping命令能够验证网络的连通性，统计响应时间和TTL(IP包中的Time To Live，生存周期)</p>
 <p><img src="./ping.png"></img></p>
 <h3 id="1-4-2-tracert"><a href="#1-4-2-tracert" class="headerlink" title="1.4.2  tracert"></a>1.4.2  tracert</h3><p>​	tracert命令能够打印出可执行程序主机，一直到目标主机之前经历多少路由器。</p>
 <p><img src="./tracert.png"></img></p>
-<h1 id="2-TCP"><a href="#2-TCP" class="headerlink" title="2.TCP"></a>2.TCP</h1><h1 id="3-UDP"><a href="#3-UDP" class="headerlink" title="3.UDP"></a>3.UDP</h1><p>​	UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。</p>
+<h1 id="3-TCP"><a href="#3-TCP" class="headerlink" title="3.TCP"></a>3.TCP</h1><p>​	 TCP（Transmission Control Protocol 传输控制协议）<strong>传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层协议</strong>。通俗地说TCP就是对于传输、发送、通信进行控制的协议 。</p>
+<h2 id="3-1-TCP的三次握手和四次挥手"><a href="#3-1-TCP的三次握手和四次挥手" class="headerlink" title="3.1 TCP的三次握手和四次挥手"></a>3.1 TCP的三次握手和四次挥手</h2><h3 id="3-1-1-三次握手"><a href="#3-1-1-三次握手" class="headerlink" title="3.1.1 三次握手"></a>3.1.1 三次握手</h3><p><img src="./tcp_three.png"></img></p>
+<p>第一次握手：客户端发送请求连接SYN（同步报文段，代表请求建立连接），并进入SYN_SENT状态，等待服务器的确认；</p>
+<p>第二次握手：服务器收到连接请求后向客户端发送请求连接SYN，和确认报文段ACK（ACK&#x3D;1代表有效），并进入SYN_RECD状态；</p>
+<p>第三次握手：客户端收到报文后向服务器发送确认报文段ACK，并进入established状态，开始读写数据，服务器收到报文后也进入established状态，开始读写数据</p>
+<p>简述：</p>
+<ul>
+<li>第一次握手：服务端确认“服务端收、客户端发”报文功能正常 ；</li>
+<li>第二次握手：客户端确认“客户端收、客户端发、服务端收、服务端发”报文功能正常，客户端认为连接已建立。</li>
+<li>第三次握手：服务端确认“服务端发、客户端收”报文功能正常，此时双方均建立连接，可以正常通信。</li>
+</ul>
+<h3 id="3-1-2-四次挥手"><a href="#3-1-2-四次挥手" class="headerlink" title="3.1.2 四次挥手"></a>3.1.2 四次挥手</h3><p><img src="./tcp_four.png"></img></p>
+<p>第一次挥手：客户端进程发出连接释放报文，并且停止发送数据FIN&#x3D;1。 </p>
+<p>第二次挥手：服务器收到连接释放报文，发出确认报文，ACK&#x3D;1 ， 此时服务端就进入了CLOSE-WAIT（关闭等待）状态。  客户端收到服务器的确认请求后，此时客户端就进入FIN-WAIT-2（终止等待2）状态，</p>
+<p>第三次挥手： 服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，FIN&#x3D;1</p>
+<p>第四次握手：客户端收到服务器的连接释放报文后，必须发出确认，ACK&#x3D;1 </p>
+<h2 id="3-2-tcp特点"><a href="#3-2-tcp特点" class="headerlink" title="3.2 tcp特点"></a>3.2 tcp特点</h2><p>​	面向连接： 指发送数据之前必须在两端建立连接， 为数据的可靠传输打下了基础。</p>
+<p>​	单播：每条TCP连接只能有两个端点，只能进行点对点的数据传输。</p>
+<p>​	面向字节流：以字节流方式进行传输。</p>
+<p>​	提供拥塞控制： 当网络出现拥塞的时候，TCP能够减小向网络注入数据的速率和数量，缓解拥塞  。</p>
+<p>​	全双工： TCP允许通信双方的应用程序在任何时候都能发送数据。</p>
+<h1 id="4-UDP"><a href="#4-UDP" class="headerlink" title="4.UDP"></a>4.UDP</h1><p>​	UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。</p>
+<p>4.1 UDP特点</p>
+<p>​	可单播、广播；</p>
+<p>​	面向报文： 发送方的UDP对应用程序交下来的报文，在添加首部后就向下交付IP层，既不合并，也不拆分，而是保留这些报文的边界。 </p>
+<p>​	不可靠：udp不需通信双方建立连接；</p>
+<p>​	高效：udp头部开销小，只有8字节，相比于tcp的至少要20字节少的多，能高效传输报文</p>
+<p>4.2 TCP和UDP对比</p>
+<p><img src="./tcp-udp.png"></img></p>
 
                 
             </div>
