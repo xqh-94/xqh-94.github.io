@@ -11,22 +11,22 @@
 
 OSI中的层级
 功能
-TCP&amp;#x2F;IP协议族
+TCP&amp;#x2F;IP协议簇
 
 
 
 应用层
-
+提供应用程序
 HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
 
 
 表示层
 数据格式化，代码转换，数据加密
-
+无
 
 
 会话层
-解除或建立与别的站点的联系">
+解除或建立与">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -424,21 +424,21 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-09
+                    2022-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -463,47 +463,67 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
 <thead>
 <tr>
 <th align="center">OSI中的层级</th>
-<th>功能</th>
-<th>TCP&#x2F;IP协议族</th>
+<th align="center">功能</th>
+<th align="center">TCP&#x2F;IP协议簇</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">应用层</td>
-<td></td>
-<td>HTTP，SNMP，FTP，SMTP，DNS，Telnet 等</td>
+<td align="center">提供应用程序</td>
+<td align="center">HTTP，SNMP，FTP，SMTP，DNS，Telnet 等</td>
 </tr>
 <tr>
 <td align="center">表示层</td>
-<td>数据格式化，代码转换，数据加密</td>
-<td></td>
+<td align="center">数据格式化，代码转换，数据加密</td>
+<td align="center">无</td>
 </tr>
 <tr>
 <td align="center">会话层</td>
-<td>解除或建立与别的站点的联系</td>
-<td></td>
+<td align="center">解除或建立与别的站点的联系</td>
+<td align="center">无</td>
 </tr>
 <tr>
 <td align="center">传输层</td>
-<td>提供端对端的接口</td>
-<td></td>
+<td align="center">提供端对端的接口</td>
+<td align="center">TCP，UDP</td>
 </tr>
 <tr>
 <td align="center">网络层</td>
-<td>为数据包选择路由</td>
-<td>IP，ICMP，OSPF，EIGRP，IGMP</td>
+<td align="center">为数据包选择路由</td>
+<td align="center">IP，ICMP，OSPF，EIGRP，IGMP</td>
 </tr>
 <tr>
 <td align="center">数据链路层</td>
-<td>传输有地址的帧以及错误检测功能</td>
-<td>SLIP，CSLIP，PPP，MTU</td>
+<td align="center">传输有地址的帧以及错误检测功能</td>
+<td align="center">SLIP，CSLIP，PPP，MTU</td>
 </tr>
 <tr>
 <td align="center">物理层</td>
-<td>以二进制数据形式在物理媒体上传输数据</td>
-<td>ISO2110，IEEE802，IEEE802.2</td>
+<td align="center">以二进制数据形式在物理媒体上传输数据</td>
+<td align="center">ISO2110，IEEE802，IEEE802.2</td>
 </tr>
 </tbody></table>
 <p>​	OSI 参考模型全称是开放系统互连参考模型(Open System Interconnection Reference Model)。这一参考模型共分为七层：物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。 </p>
+<p>​	TCP&#x2F;IP协议簇（括号内为使用端口号）：</p>
+<table  style="text-align:center">
+    <tr>
+        <td>应用层</td> 
+        <td>TELNET(23H)、FTP(20H,21H)、SMTP(25)、HTTP(80) </td> 
+        <td>DNS(53)、SNMP、TFTP</td>
+   </tr>
+    <tr>
+        <td>运输层</td> 
+        <td >TCP</td>    
+        <td >UDP</td>    
+    </tr>
+    <tr>
+        <td>网络层</td> 
+        <td colspan="2">IP</td>    
+    </tr>
+</table>
+
+
+
 <h3 id="1-1-物理层"><a href="#1-1-物理层" class="headerlink" title="1.1 物理层"></a>1.1 物理层</h3><p>作用：将数据的0,1转换为电信号或者光信号</p>
 <h3 id="1-2-数据链路层"><a href="#1-2-数据链路层" class="headerlink" title="1.2  数据链路层"></a>1.2  数据链路层</h3><p> 数据链路层是负责接收 IP 数据包并通过网络发送，或者从网络上接收物理帧，抽出 IP 数据包，交给 IP 层 。</p>
 <h3 id="1-3-网络层"><a href="#1-3-网络层" class="headerlink" title="1.3 网络层"></a>1.3 网络层</h3><p> 负责相邻计算机之间的通信。实现将数据传输到目标地址的功能 </p>
@@ -547,9 +567,19 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
 <p>ICMP协议主要通过 Type 和 Code 的组合，来标明报文的类型</p>
 <h3 id="2-4-ICMP命令"><a href="#2-4-ICMP命令" class="headerlink" title="2.4 ICMP命令"></a>2.4 ICMP命令</h3><h4 id="2-4-1-ping"><a href="#2-4-1-ping" class="headerlink" title="2.4.1 ping"></a>2.4.1 ping</h4><p>​	ping命令能够验证网络的连通性，统计响应时间和TTL(IP包中的Time To Live，生存周期)</p>
 <p><img src="./ping.png"></img></p>
+<p>​	ping中的TTL含义：(Time To Live ) 生存时间，指定数据包被路由器丢弃之前允许通过的网段数量。</p>
+<p>​	TTL是由发送主机设置的，以防止数据包不断在网络上永不终止的循环，数据包在网络中传输的时候，每经过一个节点（路由器、工作站、服务器），TTL减1，在传输过程中，有以下两个结果：</p>
+<ul>
+<li><p>包在值还为正数的时候到达目的地；</p>
+</li>
+<li><p>经过一定数量的节点后，值为0；</p>
+<pre><code>前者代表完成了一次正常的传输，后者代表包可能选择了一条非常长的路径甚至进入了环路，这时网络设备将不会传输这个包，会直接将该包丢弃，并发送一个通知给包的源地址，通知该包已死。
+</code></pre>
+</li>
+</ul>
 <h4 id="2-4-2-tracert"><a href="#2-4-2-tracert" class="headerlink" title="2.4.2  tracert"></a>2.4.2  tracert</h4><p>​	tracert命令能够打印出可执行程序主机，一直到目标主机之前经历多少路由器。</p>
 <p><img src="./tracert.png"></img></p>
-<h2 id="3-TCP"><a href="#3-TCP" class="headerlink" title="3.TCP"></a>3.TCP</h2><p>​	 TCP（Transmission Control Protocol 传输控制协议）<strong>传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层协议</strong>。通俗地说TCP就是对于传输、发送、通信进行控制的协议 。</p>
+<h2 id="3-TCP"><a href="#3-TCP" class="headerlink" title="3.TCP"></a>3.TCP</h2><p>​	 TCP（Transmission Control Protocol 传输控制协议）<strong>传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层协议</strong>。通俗地说TCP就是对于传输、发送、通信进行控制的协议 。0-65535</p>
 <h3 id="3-1-TCP的三次握手和四次挥手"><a href="#3-1-TCP的三次握手和四次挥手" class="headerlink" title="3.1 TCP的三次握手和四次挥手"></a>3.1 TCP的三次握手和四次挥手</h3><h4 id="3-1-1-三次握手"><a href="#3-1-1-三次握手" class="headerlink" title="3.1.1 三次握手"></a>3.1.1 三次握手</h4><p><img src="./tcp_three.png"></img></p>
 <p>第一次握手：客户端发送请求连接SYN（同步报文段，代表请求建立连接），并进入SYN_SENT状态，等待服务器的确认；</p>
 <p>第二次握手：服务器收到连接请求后向客户端发送请求连接SYN，和确认报文段ACK（ACK&#x3D;1代表有效），并进入SYN_RECD状态；</p>
@@ -575,8 +605,56 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
 <p>​	面向报文： 发送方的UDP对应用程序交下来的报文，在添加首部后就向下交付IP层，既不合并，也不拆分，而是保留这些报文的边界。 </p>
 <p>​	不可靠：udp不需通信双方建立连接；</p>
 <p>​	高效：udp头部开销小，只有8字节，相比于tcp的至少要20字节少的多，能高效传输报文</p>
-<h3 id="4-2-TCP和UDP对比"><a href="#4-2-TCP和UDP对比" class="headerlink" title="4.2 TCP和UDP对比"></a>4.2 TCP和UDP对比</h3><p><img src="./tcp-udp.png"></img></p>
-
+<h3 id="4-2-TCP和UDP对比"><a href="#4-2-TCP和UDP对比" class="headerlink" title="4.2 TCP和UDP对比"></a>4.2 TCP和UDP对比</h3><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">TCP</th>
+<th align="center">UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">连接性</td>
+<td align="center">面向连接</td>
+<td align="center">无连接</td>
+</tr>
+<tr>
+<td align="center">可靠性</td>
+<td align="center">可靠</td>
+<td align="center">不可靠</td>
+</tr>
+<tr>
+<td align="center">传输方式</td>
+<td align="center">面向字节流</td>
+<td align="center">面向报文</td>
+</tr>
+<tr>
+<td align="center">传输效率</td>
+<td align="center">慢（头部字节多，至少20字节）</td>
+<td align="center">快（头部字节少，8字节）</td>
+</tr>
+<tr>
+<td align="center">双工性</td>
+<td align="center">全双工</td>
+<td align="center">一对一、一对多、多对一、多对多</td>
+</tr>
+<tr>
+<td align="center">流量控制&#x2F;拥塞控制</td>
+<td align="center">有</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">应用场景</td>
+<td align="center">对效率要求低，但是准确性要求高的场景，或是要求有连接的场景，比如文件传输、发送邮件等</td>
+<td align="center">对效率要求高，但准确率相对低的场景，比如即时通信，直播等</td>
+</tr>
+<tr>
+<td align="center">应用层协议</td>
+<td align="center">SMTP(电子邮件)，TELNET(远程登录控制)，FTP(文件传输协议)，HTTP(超文本传输协议)</td>
+<td align="center">DNS，TFTP(文件传输)，DHCP(动态主机配置)</td>
+</tr>
+</tbody></table>
+<h2 id="5-DNS"><a href="#5-DNS" class="headerlink" title="5.DNS"></a>5.DNS</h2>
                 
             </div>
             <hr/>
@@ -1008,7 +1086,7 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.2k</span>
+                        class="white-color">2.6k</span>
             
             
             
