@@ -411,7 +411,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" + parseInt(Math.random()*7) + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -579,8 +579,7 @@
                     <a href="/2022/12/08/Network/">
                         <div class="card-image">
                             
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Network">
+                            <img src="https://img1.baidu.com/it/u=2830312164,3331281192&fm=253&fmt=auto&app=138&f=JPEG?w=752&h=500" class="responsive-img" alt="Network">
                             
                             <span class="card-title">Network</span>
                         </div>
@@ -589,7 +588,7 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                1.网络参考模型
+                                1.网络参考&lt;img src=&quot;./OSI.png&quot;&gt;&lt;/img&gt;
 
 
 
@@ -601,16 +600,7 @@ TCP&#x2F;IP协议簇
 
 应用层
 提供应用程序
-HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
-
-
-表示层
-数据格式化，代码转换，数据加密
-无
-
-
-会话层
-解除或建立与
+HTTP，SNMP，FTP，SMTP，DN
                             
                         </div>
                         <div class="publish-info">
@@ -758,7 +748,7 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">XiaoQinHong</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -766,7 +756,7 @@ HTTP，SNMP，FTP，SMTP，DNS，Telnet 等
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.6k</span>
+                        class="white-color">2.7k</span>
             
             
             
